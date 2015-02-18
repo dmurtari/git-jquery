@@ -1,8 +1,25 @@
+div.row
+    div.five.columns
+        = "Name"
+    div.one.columns
+        img(src="http://livestock.tru-test.com/sites/default/files/pictures/ICON_Warning.jpg", width="15")
+    div.one.columns
+        img(src="https://greasyfork.org/forum/uploads/thumbnails/FileUpload/df/f87899bf1034cd4933c374b02eb5ac.png", width="15")
+    div.one.columns
+        img(src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/34-128.png", width="15")
+    div.four.columns
+        = "Language"
+
 each item in items
     div.row 
-        div.six.columns
+        div.five.columns
             a(href="#", onClick='repoView("' + item.full_name + '")')
-                = item.full_name
-        div.six.columns
+                = item.name
+        div.one.columns
             = item.open_issues
-            |  issues
+        div.one.columns
+            = item.forks
+        div.one.columns
+            = item.watchers_count
+        div.four.columns
+            = item.language
