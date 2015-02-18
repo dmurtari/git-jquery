@@ -1,6 +1,25 @@
+div.row
+    div.three.columns
+        strong= "Event Type"
+    div.two.columns
+        strong= "Actor"
+    div.two.columns
+        strong= "Public/Private"
+    div.three.columns
+        strong= "Created At"
+    div.two.columns
+        strong= "ID"
+
 each item in items
+    - var status = (item.public ? "Public" : "Private")
     div.row 
-        div.six.columns
+        div.three.columns
             = item.type
-        div.six.columns
+        div.two.columns
             = item.actor.login
+        div.two.columns
+            = status
+        div.three.columns
+            = item.created_at
+        div.two.columns
+            = item.id

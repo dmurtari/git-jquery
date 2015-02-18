@@ -15,8 +15,8 @@ function myEvents(){
             // render the template
             var html = jade.render(template, {items: events})            
 
-            // assign the rendered html to the dom element whose id is #list
-            $("#list").html(html)
+            // assign the rendered html to the dom element whose id is #events
+            $("#events").html(html)
         })
 
     })
