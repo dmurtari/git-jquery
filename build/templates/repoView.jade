@@ -1,1 +1,62 @@
-h5= item.full_name
+h3= item.full_name
+
+p= item.description
+
+div.row
+    div.three.columns
+        strong= "Language"
+    div.three.columns
+        strong= "Forks"
+    div.three.columns
+        strong= "Watchers"
+    div.three.columns
+        strong= "Issues"
+div.row
+    div.three.columns
+        = item.language
+    div.three.columns
+        = item.forks
+    div.three.columns
+        = item.watchers_count
+    div.three.columns
+        = item.open_issues
+br
+
+if item.private
+    = "Private repo"
+
+h3= "Owner Information"
+
+div.row
+    div.six.columns
+        img(src=item.owner.avatar_url, width="200")
+    div.six.columns
+        strong= "User ID: "
+        = item.owner.login
+        br
+        strong= "User Type: "
+        = item.owner.type
+
+br
+h3= "Repository Information"
+
+strong= "Created at: "
+= item.created_at
+br
+strong= "Updated at: "
+= item.updated_at
+br
+strong= "Pushed at: "
+= item.pushed_at
+br
+strong= "Git URL: "
+= item.git_url
+br
+strong= "Clone URL: "
+= item.clone_url
+br
+strong= "SSH URL: "
+= item.ssh_url
+br
+strong= "SVN URL: "
+= item.svn_url
